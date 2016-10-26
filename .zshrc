@@ -12,7 +12,9 @@ compinit
 
 #{{{ Other sourcing
 
-# source ~/.zsh/zsh-git-prompt/zshrc.sh Still not working, ugh
+if [[ -f ~/.zsh/ge_specific ]]; then
+  source ~/.zsh/ge_specific
+fi
 
 #}}}
 
@@ -48,17 +50,12 @@ setopt VI
 
 #{{{ exports
 
-export proxy_url=http://proxy-src.research.ge.com:8080
-
 #}}}
 
 
 #{{{ Alias
 
 alias history='history 0'
-alias proxyon='export http_proxy=$proxy_url; export https_proxy=$proxy_url; export ftp_proxy=$proxy_url; export no_proxy="127.0.0.1,localhost,*.ge.com,ge.com"'
-alias proxyoff='unset http_proxy ; unset https_proxy; unset ftp_proxy, unset no_proxy'
-alias ice-bastion-users-git-on='export GITHUB_NAME=chef; export GITHUB_TOKEN=c4300e184d165d8024a78f5d7ed1c2e57e90f700'
 
 #}}}
 
