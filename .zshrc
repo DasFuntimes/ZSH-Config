@@ -24,7 +24,7 @@ fi
 # use alt-s to insert a sudo to start of command
 insert_sudo () { zle beginning-of-line; zle -U "sudo " }
 zle -N insert-sudo insert_sudo
-bindkey "Í" insert-sudo
+#bindkey "Í" insert-sudo
 
 #}}}
 
