@@ -203,7 +203,8 @@ else
     post_prompt="%{$fg_bold[$user_color]%}%#%{$reset_color%}"
 fi
 
-PROMPT='${host_prompt} ${jobs_total}${history_total} ${directory_prompt}$(prompt_git_info)${error_total} ${post_prompt} '
+PROMPT='${host_prompt} ${jobs_total}${history_total} ${directory_prompt}$(prompt_git_info)${error_total}
+${post_prompt} '
 
 #}}}
 
