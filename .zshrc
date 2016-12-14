@@ -56,6 +56,7 @@ setopt VI
 #{{{ Alias
 
 alias history='history 0'
+alias ll='ls -l'
 
 #}}}
 
