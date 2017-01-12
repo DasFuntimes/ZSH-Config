@@ -4,17 +4,29 @@
 
 #{{{ ZSH Modules
 
-autoload -U colors compinit
+autoload -Uz colors compinit
+
+typeset -i updated_at=$(date +'%j' -r ~/.zcompdump 2>/dev/null || stat -f '%Sm' -t '%j' ~/.zcompdump 2>/dev/null)
+if [ $(date +'%j') != $updated_at ]; then
+  compinit
+else
+  compinit -C
+fi
+
 colors
-compinit
 
 #}}}
 
-#{{{ Other sourcing
 
-if [[ -f ~/.zsh/ge_specific ]]; then
-  source ~/.zsh/ge_specific
-fi
+#{{{ exports
+
+
+#}}}
+
+
+#{{{ local sourcing
+
+[ -f ~/.localrc ] && . ~/.localrc
 
 #}}}
 
@@ -48,21 +60,10 @@ setopt VI
 #}}}
 
 
-#{{{ exports
-
-#}}}
-
-
-#{{{ Alias
+#{{{ Common Alias
 
 alias history='history 0'
 alias ll='ls -l'
-
-#}}}
-
-
-#{{{ Shell Stuff
-
 alias ls='pwd; ls -G'
 alias sz='source ~/.zshrc'
 alias ez='atom ~/.zshrc'
@@ -264,6 +265,7 @@ edit-command-output() {
  BUFFER=$(eval $BUFFER)
  CURSOR=0
 }
+
 zle -N edit-command-output
 
 #}}}
