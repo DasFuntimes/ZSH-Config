@@ -66,7 +66,7 @@ alias history='history 0'
 alias ll='ls -l'
 alias ls='pwd; ls -G'
 alias sz='source ~/.zshrc'
-alias ez='atom ~/.zshrc'
+alias ez='atom ~/.zsh/. ~/.localrc'
 
 #}}}
 
