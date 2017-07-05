@@ -26,6 +26,8 @@ colors
 
 #{{{ local sourcing
 
+# this will source a localrc file if it exists
+
 [ -f ~/.localrc/localrc ] && . ~/.localrc/localrc
 
 #}}}
