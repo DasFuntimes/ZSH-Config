@@ -26,7 +26,7 @@ colors
 
 #{{{ local sourcing
 
-[ -f ~/.localrc ] && . ~/.localrc
+[ -f ~/.localrc/localrc ] && . ~/.localrc/localrc
 
 #}}}
 
@@ -66,7 +66,7 @@ alias history='history 0'
 alias ll='ls -l'
 alias ls='pwd; ls -G'
 alias sz='source ~/.zshrc'
-alias ez='atom ~/.zsh/. ~/.localrc'
+alias ez='atom ~/.zsh/. ~/.localrc/localrc'
 
 #}}}
 
