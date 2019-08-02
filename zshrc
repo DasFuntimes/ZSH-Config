@@ -39,6 +39,8 @@ colors
 insert_sudo () { zle beginning-of-line; zle -U "sudo " }
 zle -N insert-sudo insert_sudo
 #bindkey "Í" insert-sudo
+bindkey -v
+bindkey '^R' history-incremental-search-backward
 
 #}}}
 
